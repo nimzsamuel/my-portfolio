@@ -5,6 +5,15 @@ body {
   scroll-behavior: smooth;
   transition: background-color 0.3s ease;
 }
+body.light {
+  background-color: #e6f7ff;
+  color: #333;
+}
+
+body.dark {
+  background-color: #1a1a2e;
+  color: #eee;
+}
 
 .app-container {
   max-width: 1200px;
@@ -104,7 +113,10 @@ body.dark header {
   object-fit: cover;
   display: block;
   margin: 0 auto 20px;
-  border: 5px solid #4facfe;
+}
+.project-list a {
+  text-decoration: none;
+  color:black;
 }
 
 .project-list li {
@@ -256,3 +268,40 @@ body.dark .project-card {
 .social-icons a:hover {
   color: #4facfe;
 }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: var(--card-bg, white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app.dark .project-card {
+  background: #2b2b2b;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: #005fcc;
+}
+
