@@ -1,6 +1,6 @@
 import React from "react";
 
-function Projects() {
+const Projects = () => {
   const projects = [
     {
       title: "RoboFriends",
